@@ -9,21 +9,7 @@
 
     <!-- LINK -->
 	<link rel="icon" type="image/png" href="images/ciu_logo.png">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript">
-        $("#btnPrint").live("click", function () {
 
-            var divContents = $("#dvContainer").html();
-            var printWindow = window.open('', '', 'height=600,width=960');
-            printWindow.document.write('<html><head><title>Student Registation Form</title>');
-            printWindow.document.write('</head><body >');
-            printWindow.document.write(divContents);
-            printWindow.document.write('</body></html>');
-            printWindow.document.close();
-            printWindow.print();
-        });
-    </script>
     <!-- SCRIPT -->
     <!-- CSS -->
     <style type="text/css">
@@ -65,19 +51,19 @@
 	        	<table width="100%" style="text-align: left;" border="1">
 	        		<tr>
 	        			<th style="padding: 5px;">Surname:</th>
-	        			<td style="padding: 5px;" colspan="5"><input type="text" ng-model="surname" value="{{surname}}" style="padding: 5px;width: 100%;"></td>
+	        			<td style="padding: 5px;" colspan="5"><input type="text" style="padding: 5px;width: 100%;"></td>
 	        		</tr>
 	        		<tr>
 	        			<th style="padding: 5px;">First Name:</th>
-	        			<td style="padding: 5px;"><input type="text" ng-model="firstname" value="{{firstname}}" style="padding: 5px;width: 100%;"></td>
+	        			<td style="padding: 5px;"><input type="text" style="padding: 5px;width: 100%;"></td>
 	        			<td colspan="3" align="center">Birth Date</td>
 	        		</tr>
 	        		<tr>
 	        			<th style="padding: 5px;">Middle Name:</th>
-	        			<td style="padding: 5px;"><input type="text" ng-model="middlename" value="{{middlename}}" style="padding: 5px;width: 100%;"></td>
-	        			<td align="center"><input type="text" ng-model="birthyear" value="{{birthyear}}" style="padding: 5px;max-width: 50px;text-align: center;" placeholder="DD"></td>
-	        			<td align="center"><input type="text" ng-model="birthday" value="{{birthday}}" style="padding: 5px;max-width: 50px;text-align: center;" placeholder="MM"></td>
-	        			<td align="center"><input type="text" ng-model="birthmonth" value="{{birthmonth}}" style="padding: 5px;max-width: 50px;text-align: center;" placeholder="YYYY"></td>
+	        			<td style="padding: 5px;"><input type="text" style="padding: 5px;width: 100%;"></td>
+	        			<td align="center"><input type="text" style="padding: 5px;max-width: 50px;text-align: center;" placeholder="DD"></td>
+	        			<td align="center"><input type="text" style="padding: 5px;max-width: 50px;text-align: center;" placeholder="MM"></td>
+	        			<td align="center"><input type="text" style="padding: 5px;max-width: 50px;text-align: center;" placeholder="YYYY"></td>
 	        		</tr>
 	        		<tr>
 	        			<th style="padding: 5px;">Gender:</th>
@@ -93,11 +79,11 @@
 	        		<tr>
 	        			<th style="padding: 5px;">Address</th>
 	        			<td style="padding: 5px;">
-	        				<input type="text" style="width: 100%;padding: 5px;" ng-model="address" value="{{address}}">
+	        				<input style="width: 100%;padding: 5px;"></input>
 	        			</td>
 	        			<th style="padding: 5px;">City</th>
 	        			<td style="padding: 5px;" colspan="2">
-	        				<input type="text" style="width: 100%;padding: 5px;" ng-model="city" value="{{city}}">
+	        				<input style="width: 100%;padding: 5px;"></input>
 	        			</td>
 	        		</tr>
 	        	</table>
@@ -120,7 +106,7 @@
                     </tr>
                     <tr>
                         <td style="padding: 5px;">If yes, please give a brief description</td>
-                        <td style="padding: 5px;"><input type="text" ng-model="ifyes" value="{{ifyes}}" style="width: 100%;padding: 5px;"></td>
+                        <td style="padding: 5px;"><input type="text" style="width: 100%;padding: 5px;"></td>
                     </tr>
                     <tr>
                         <td style="padding: 5px;">Have you completed the Student Health Plan?</td>
@@ -142,37 +128,37 @@
                         <th style="padding: 5px;">Name of Middle School</th>
                         <th style="padding: 5px;">Grade Completed</th>
                         <th style="padding: 5px;" rowspan="2" align="center">Start Date <br>
-                            <input type="text" ng-model="schoolstartday" value="{{schoolstartday}}" placeholder="DD" style="padding: 5px; width: 50px;">
-                            <input type="text" ng-model="schoolstartmonth" value="{{schoolstartmonth}}"placeholder="MM" style="padding: 5px; width: 40px;">
-                            <input type="text" ng-model="schoolstartyear" value="{{schoolstartyear}}" placeholder="YYYY" style="padding: 5px; width: 40px;">
+                            <input type="text" placeholder="DD" style="padding: 5px; width: 50px;">
+                            <input type="text" placeholder="MM" style="padding: 5px; width: 40px;">
+                            <input type="text" placeholder="YYYY" style="padding: 5px; width: 40px;">
                         </th>
                         <th style="padding: 5px;" colspan="2" rowspan="2" align="center">Finish Date <br>
-                            <input type="text" ng-model="schoolfinishday" value="{{schoolfinishday}}" placeholder="YYYY" style="padding: 5px; width: 50px;">
-                            <input type="text" ng-model="schoolfinishmonth" value="{{schoolfinishmonth}}" placeholder="DD" style="padding: 5px; width: 40px;">
-                            <input type="text" ng-model="schoolfinishyear" value="{{schoolfinishyear}}" placeholder="MM" style="padding: 5px; width: 40px;">
+                            <input type="text" placeholder="YYYY" style="padding: 5px; width: 50px;">
+                            <input type="text" placeholder="DD" style="padding: 5px; width: 40px;">
+                            <input type="text" placeholder="MM" style="padding: 5px; width: 40px;">
                         </th>
                     </tr>
                     <tr>
-                        <td style="padding: 5px;"><input type="text" ng-model="nameofschool" value="{{nameofschool}}" style="padding: 5px; width: 100%;"></td>
-                        <td style="padding: 5px;"><input type="text" ng-model="gradeEntering" value="{{gradeEntering}}" style="padding: 5px; width: 100%;"></td>
+                        <td style="padding: 5px;"><input type="text" style="padding: 5px; width: 100%;"></td>
+                        <td style="padding: 5px;"><input type="text" style="padding: 5px; width: 100%;"></td>
                     </tr>
                     <tr>
                         <th style="padding: 5px;">Name of High School</th>
                         <th style="padding: 5px;">Grade Completed</th>
                         <th style="padding: 5px;" rowspan="2" align="center">Start Date <br>
-                            <input type="text" ng-model="schoolstartday2" value="{{schoolstartday2}}" placeholder="DD" style="padding: 5px; width: 50px;">
-                            <input type="text" ng-model="schoolstartmonth2" value="{{schoolstartmonth2}}" placeholder="MM" style="padding: 5px; width: 40px;">
-                            <input type="text" ng-model="schoolstartyear2" value="{{schoolstartyear2}}" placeholder="YYYY" style="padding: 5px; width: 40px;">
+                            <input type="text" placeholder="DD" style="padding: 5px; width: 50px;">
+                            <input type="text" placeholder="MM" style="padding: 5px; width: 40px;">
+                            <input type="text" placeholder="YYYY" style="padding: 5px; width: 40px;">
                         </th>
                         <th style="padding: 5px;" colspan="2" rowspan="2" align="center">Finish Date <br>
-                            <input type="text" ng-model="schoolfinishday2" value="{{schoolfinishday2}}" placeholder="DD" style="padding: 5px; width: 50px;">
-                            <input type="text" ng-model="schoolfinishmonth2" value="{{schoolfinishmonth2}}" placeholder="MM" style="padding: 5px; width: 40px;">
-                            <input type="text" ng-model="schoolfinishyear2" value="{{schoolfinishyear2}}" placeholder="YYYY" style="padding: 5px; width: 40px;">
+                            <input type="text" placeholder="DD" style="padding: 5px; width: 50px;">
+                            <input type="text" placeholder="MM" style="padding: 5px; width: 40px;">
+                            <input type="text" placeholder="YYYY" style="padding: 5px; width: 40px;">
                         </th>
                     </tr>
                     <tr>
-                        <td style="padding: 5px;"><input type="text" ng-model="nameofhighschool" value="{{nameofhighschool}}" style="padding: 5px; width: 100%;"></td>
-                        <td style="padding: 5px;"><input type="text" ng-model="gradeEnteringofhighsc" value="{{gradeEnteringofhighsc}}" style="padding: 5px; width: 100%;"></td>
+                        <td style="padding: 5px;"><input type="text" style="padding: 5px; width: 100%;"></td>
+                        <td style="padding: 5px;"><input type="text" style="padding: 5px; width: 100%;"></td>
                     </tr>
                 </table>
 	        </div>
